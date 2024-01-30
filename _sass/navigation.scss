@@ -101,6 +101,6 @@
     transform: rotate(-45deg);
 }
 
-#nav-toggle:is(:active, :hover) .nav-icon-bar {
+#nav-toggle:is(:hover) .nav-icon-bar {
     background-color: $text-color;
 }

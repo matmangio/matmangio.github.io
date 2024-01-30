@@ -69,16 +69,7 @@ kramdown:
 #   - vendor/ruby/
 
 # Site specifics
-collections:
-  games:
-    output: true
-
 defaults:
-  - scope:
-      path: ""
-      type: "games"
-    values:
-      layout: "my_game"
   - scope:
       path: ""
       type: "posts"
