@@ -1,0 +1,30 @@
+.foot-body {
+    margin-top: auto;
+    background-color: $nav-color;
+    color: $bg-color;
+    border-top: 4px solid $border-color;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+
+    .foot-column {
+        padding: 10px;
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: $bg-color
+        }
+
+        a:hover {
+            color: $text-color;
+        }
+
+        a.top {
+            margin-bottom: 10px;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+}

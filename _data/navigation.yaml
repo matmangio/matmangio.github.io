@@ -1,4 +1,4 @@
-- name: home
+- name: matmangio
   link: /
 - name: articles
   link: /articles.html
@@ -6,5 +6,3 @@
   link: /games.html
 - name: about
   link: /about.html
-- name: contacts
-  link: /contacts.html

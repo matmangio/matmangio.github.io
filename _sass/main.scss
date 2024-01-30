@@ -1,0 +1,38 @@
+* {
+    .container {
+        display: flex;
+        min-height: 100svh;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .word-break {
+        word-break: break-word;
+    }
+
+    .justify-text {
+        text-align: justify;
+        text-justify: auto;
+    }
+
+    .valign-middle {
+        vertical-align: middle;
+    }
+    
+    .center {
+        justify-content: center;
+    }
+
+    .center-text {
+        text-align: center;
+    }
+    
+    .content {
+        margin: 0px 16px 0px 16px;
+    }
+}
+
+body {
+    background-color: $bg-color;
+    color: $text-color;
+}
