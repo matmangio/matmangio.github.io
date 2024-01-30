@@ -30,9 +30,26 @@
     .content {
         margin: 0px 16px 0px 16px;
     }
+
+    .hidden {
+        display: none;
+    }
+
+    @media (max-width: 671.5px) {
+        .hidden-sm {
+            display: none;
+        }
+    }
+
+    @media (min-width: 671.5px) {
+        .hidden-over-sm {
+            display: none;
+        }
+    }
 }
 
 body {
     background-color: $bg-color;
     color: $text-color;
+    font-size: large;
 }

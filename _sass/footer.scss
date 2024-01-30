@@ -17,6 +17,19 @@
 
         a:hover {
             color: $text-color;
+            font-weight: bold;
+
+            img {
+                filter: invert(98%) sepia(0%) saturate(2395%) hue-rotate(301deg) brightness(110%) contrast(70%);
+            }
+        }
+
+        a:active {
+            color: white;
+
+            img {
+                filter: invert(100%);
+            }
         }
 
         a.top {
