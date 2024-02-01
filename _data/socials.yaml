@@ -1,17 +1,17 @@
 - name: email
-  link: mailto:{{ site.email }}
+  link: mailto:mat.mangioni@gmail.com
   svg: mail-logo.svg
 - name: linkedin
-  link: https://www.linkedin.com/in/{{ site.linkedin_username }}/
+  link: https://www.linkedin.com/in/matteo-mangioni-18302224b/
   svg: linkedin-logo.svg
 - name: twitter
-  link: https://twitter.com/{{ site.twitter_username }}
+  link: https://twitter.com/matmangio
   svg: twitter-logo.svg
 - name: itch.io
-  link: https://{{ site.itch_username }}.itch.io
+  link: https://matmangio.itch.io
   svg: itch-logo.svg
 - name: github
-  link: https://github.com/{{ site.github_username }}
+  link: https://github.com/matmangio
   svg: github-logo.svg
 - name: rss feed
   link: /feed.xml
