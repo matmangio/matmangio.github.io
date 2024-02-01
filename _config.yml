@@ -29,6 +29,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: matmangio
 github_username:  matmangio
 itch_username: matmangio
+linkedin_username: matteo-mangioni-18302224b
 
 # Build settings
 theme: minima
@@ -36,6 +37,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jemoji
 
 # Settings for Github Pages
 lsi: false
@@ -79,3 +81,6 @@ defaults:
       path: ""
     values:
       layout: "my_default"
+
+# Jekyll feed options
+author: matmangio

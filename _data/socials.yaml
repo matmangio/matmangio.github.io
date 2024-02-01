@@ -1,0 +1,18 @@
+- name: email
+  link: mailto:{{ site.email }}
+  svg: mail-logo.svg
+- name: linkedin
+  link: https://www.linkedin.com/in/{{ site.linkedin_username }}/
+  svg: linkedin-logo.svg
+- name: twitter
+  link: https://twitter.com/{{ site.twitter_username }}
+  svg: twitter-logo.svg
+- name: itch.io
+  link: https://{{ site.itch_username }}.itch.io
+  svg: itch-logo.svg
+- name: github
+  link: https://github.com/{{ site.github_username }}
+  svg: github-logo.svg
+- name: rss feed
+  link: /feed.xml
+  svg: rss-logo.svg
