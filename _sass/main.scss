@@ -69,3 +69,16 @@ body {
     font-size: large;
     font-family: "Albert Sans", Akatab, Helvetica, sans-serif;
 }
+
+a.std-decoration {
+    color: $text-color;
+    text-decoration: underline;
+}
+
+a.std-decoration:hover {
+    color: $border-color;
+}
+
+img.emoji {
+    vertical-align: middle;
+}

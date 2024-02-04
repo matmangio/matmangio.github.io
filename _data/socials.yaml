@@ -7,6 +7,9 @@
 - name: twitter
   link: https://twitter.com/matmangio
   svg: twitter-logo.svg
+- name: instagram
+  link: https://www.instagram.com/matmangio_games/
+  svg: instagram-logo.svg
 - name: itch.io
   link: https://matmangio.itch.io
   svg: itch-logo.svg

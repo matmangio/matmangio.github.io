@@ -1,3 +1,16 @@
 ---
 title: articles
 ---
+<h1><u>Articles</u></h1>
+
+{% assign last_post_index = site.posts.size | minus: 1 %}
+{% for i in (0..last_post_index) %}
+    {% assign is_top = 0 %}
+    {% if i == 0 %}
+        {% assign is_top = 1 %}
+    {% endif %}
+    {% if i == last_post_index %}
+        {% assign is_bottom = 1 %}
+    {% endif %}
+    {% include card.html collection=site.posts index=i top=is_top bottom=is_bottom %}
+{% endfor %}

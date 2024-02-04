@@ -9,13 +9,14 @@
     .foot-column {
         padding: 10px;
 
-        a {
+        a.social {
             display: block;
             text-decoration: none;
-            color: $bg-color
+            color: $bg-color;
+            font-size: 0.8em;
         }
 
-        a:hover {
+        a.social:hover {
             color: $text-color;
             font-weight: bold;
 
@@ -24,7 +25,7 @@
             }
         }
 
-        a:active {
+        a.social:active {
             color: white;
 
             img {
@@ -34,6 +35,15 @@
 
         a.top {
             margin-bottom: 10px;
+        }
+
+        a.foot-decoration {
+            color: $bg-color;
+            text-decoration: none;
+        }
+
+        a.foot-decoration:hover {
+            color: $text-color;
         }
     }
 

@@ -1,7 +1,7 @@
 <div role="navigation" class="pure-g nav-body center">
     {% for item in site.data.navigation %}
         <div class="pure-u-1 pure-u-md-5-24 pure-u-xl-1-8 nav-item hidden-sm">
-            <a href="{{ item.link }}" class="{% if item.link == page.url %} nav-selected {% endif %}">{{ item.name }}</a>
+            <a href="{{ item.link }}" class="{% if item.link == page.url or item.link == page.parent %} nav-selected {% endif %}">{{ item.name }}</a>
         </div>
     {% endfor %}
     <div class="pure-u-1-4 nav-item nav-header hidden-over-sm">

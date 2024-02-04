@@ -9,9 +9,9 @@
                 {% assign index = index | plus: j %}
                 {% assign index = index | minus: 1 %}
                 {% if index < site.data.socials.size %}
-                    <a href="{{ site.data.socials[index].link }}" {% if j < column_size %} class="top" {% endif %}>
+                    <a href="{{ site.data.socials[index].link }}" class="social {% if j < column_size %} top {% endif %}">
                         {% if site.data.socials[index].svg != null%}
-                            <img src="/assets/images/svg/{{ site.data.socials[index].svg }}" height="20" class="valign-middle">
+                            <img src="/assets/images/svg/{{ site.data.socials[index].svg }}" height="15" class="valign-middle">
                         {% endif %}
                         {{ site.data.socials[index].name }}
                     </a>
@@ -20,6 +20,8 @@
         </div>
     {% endfor %}
     <div class="pure-u-20-24 pure-u-md-7-24 pure-u-xl-5-24 pure-u-xxxl-3-24 pure-u-x4k-1-12 foot-column">
-        <p>{{ site.description }}</p>
+        <p><small>{{ site.description }}</small></p>
+        <br>
+        <p><small>Built with <a href="https://jekyllrb.com/" class="foot-decoration">Jekyll</a> and <a href="https://purecss.io/" class="foot-decoration">PureCSS</a>.</small></p>
     </div>
 </div>

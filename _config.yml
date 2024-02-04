@@ -20,7 +20,7 @@
 
 title: matmangio
 description: >- # this means to ignore newlines until "baseurl:"
-  Matteo Mangioni's personal site: gamedev and 
+  Matteo Mangioni's personal site: game design and 
   articles about videogames, boardgames
   and all things games! 
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -66,16 +66,30 @@ kramdown:
 #   - vendor/ruby/
 
 # Site specifics
+collections:
+  games:
+    output: true
+
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "my_post"
+      parent: "/articles.html"
+  - scope:
+      path: ""
+      type: "games"
+    values:
+      layout: "my_game"
+      parent: "/games.html"
   - scope:
       path: ""
     values:
       layout: "my_default"
+
+# Excerpt options
+excerpt_separator: <!--more-->
 
 # Jekyll feed options
 author: matmangio
