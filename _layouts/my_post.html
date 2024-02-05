@@ -1,5 +1,35 @@
 ---
 layout: my_default
 ---
-<h1>{{ page.title }}</h1>
+
+<div class="links space-between">
+    <a href="/articles.html" class="std-decoration no-underline">
+        < <u>back to articles</u>
+    </a>
+    <p>{{ page.date | date: "%Y/%m/%d" }}</p>
+</div>
+
+{% if page.cover != null %}
+    <div class="post-cover">
+        <img src="{{ page.cover }}">
+    </div>
+{% endif %}
+
+<h1 class="post-title">{{ page.title }}</h1>
+
+<p class="tags">
+    {% for tag in page.tags %}
+        <b>#{{ tag | remove: ","}}</b>
+    {% endfor %}
+</p>
+
 {{ content }}
+
+<div class="links {% if page.previous != null and page.next != null %} space-between {% elsif page.next != null %} align-right {% endif %}">
+    {% if page.previous != null %}
+        <a href="{{ page.previous.url }}" class="std-decoration no-underline">< <u>{{ page.previous.title }}</u></a>
+    {% endif %}
+    {% if page.next != null %}
+        <a href="{{ page.next.url }}" class="std-decoration no-underline"><u>{{ page.next.title }}</u> ></a>
+    {% endif %}
+</div>

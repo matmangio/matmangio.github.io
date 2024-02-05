@@ -75,6 +75,10 @@ a.std-decoration {
     text-decoration: underline;
 }
 
+a.std-decoration.no-underline {
+    text-decoration: none;
+}
+
 a.std-decoration:hover {
     color: $border-color;
 }

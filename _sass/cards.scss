@@ -1,13 +1,16 @@
 div.card {
     --max-height: 120px;
+    --content-padding: 10px;
 
     border-top: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
-    padding: 10px;
-    height: var(--max-height);
+    height: calc(var(--max-height) + 2 * --content-padding);
 
     a {
-        display: flex;
+        display: block;
+        padding: var(--content-padding);
+        width: calc(100% - 2 * --content-padding);
+        height: var(--max-height);
         text-decoration: none;
         color: $text-color;
     }

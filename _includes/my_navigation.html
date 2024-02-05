@@ -18,7 +18,7 @@
         {% for item in site.data.navigation %}
             {% if item.link != site.data.navigation[0].link %}
                 <div class="pure-u-1 nav-item nav-header hidden-over-sm">
-                    <a href="{{ item.link }}" class="{% if item.link == page.url %} nav-selected {% endif %}">{{ item.name }}</a>
+                    <a href="{{ item.link }}">{{ item.name }}</a>
                 </div>
             {% endif %}
         {% endfor %}

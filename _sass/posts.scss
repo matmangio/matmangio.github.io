@@ -1,0 +1,42 @@
+div.post-cover {
+    img {
+        margin-top: 10px;
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+div.links {
+    display: flex;
+
+    a {
+        margin: 10px;
+        display: inline-block;
+    }
+
+    p {
+        margin: 10px;
+    }
+}
+
+div.links.space-between {
+    justify-content: space-between;
+}
+
+div.links.align-right {
+    justify-content: end;
+}
+
+h1.post-title {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: $border-color;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+p.tags {
+    margin: 0;
+}

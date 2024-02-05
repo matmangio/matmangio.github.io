@@ -20,12 +20,16 @@ title: home
     There's also an RSS feed available if you, like me, are into that!
 </p>
 
+<h2 class="center-text"> :page_facing_up: <u>Latest post</u></h2>
 {% if site.posts.size > 0 %}
-    <h2 class="center-text"> :page_facing_up: <u>Latest post</u></h2>
     {% include card.html collection=site.posts index=0 top=1 bottom=1 %}
+{% else %}
+    <p class="center-text">No article published yet!</p>
 {% endif %}
 
+<h2 class="center-text"> :game_die: <u>Latest game</u></h2>
 {% if site.games.size > 0 %}
-    <h2 class="center-text"> :game_die: <u>Latest game</u></h2>
     {% include card.html collection=site.games index=0 top=1 bottom=1 %}
+{% else %}
+    <p class="center-text">No game published yet!</p>
 {% endif %}
