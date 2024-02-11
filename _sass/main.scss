@@ -29,6 +29,7 @@
     
     .content {
         margin: 16px;
+        line-height: 1.5;
     }
 
     .hidden {
@@ -85,4 +86,25 @@ a.std-decoration:hover {
 
 img.emoji {
     vertical-align: middle;
+}
+
+img.on-bg {
+    filter: invert(98%) sepia(0%) saturate(2395%) hue-rotate(301deg) brightness(110%) contrast(70%);
+}
+
+img.on-bg.change-on-hover:hover {
+    filter: brightness(0) saturate(100%) invert(47%) sepia(24%) saturate(3169%) hue-rotate(351deg) brightness(98%) contrast(87%);
+}
+
+div.flex-space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.flex-space-evenly.wrap {
+    flex-wrap: wrap;
+}
+
+div.min-width-fit {
+    min-width: fit-content;
 }

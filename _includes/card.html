@@ -13,11 +13,15 @@
                         {{ post.date | date: "%Y/%m/%d" }}
                         <div class="hidden-sm">
                             {%if post.tags.size > 0 %}
-                                {% for i in (0..tags_num) %} 
-                                    <b>#{{ post.tags[i] | remove: "," }}</b>
+                                {% for i in (0..tags_num) %}
+                                    {% assign tag_name = post.tags[i] | remove: "," %}
+                                    {% assign tag_data = site.data.tags | where: "name", tag_name | first %} 
+                                    <b class="tag-card" {% if tag_data %} style="background-color: {{ tag_data.bgcolor }}; color: {{ tag_data.color }}" {% endif %}>
+                                        {{ tag_name }}
+                                    </b>
                                 {% endfor %} 
                             {% endif %}
-                        </div> 
+                        </div>
                     </small>
                 </p>
                 <p>{{ post.excerpt }}</p>
