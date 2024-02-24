@@ -1,5 +1,5 @@
 div.card {
-    --max-height: 120px;
+    --max-height: 140px;
     --content-padding: 10px;
 
     border-top: 1px solid $border-color;
@@ -32,16 +32,18 @@ div.card {
     .card-content {
         max-height: var(--max-height);
     }
+}
 
-    .tag-card {
-        padding: 1px 5px;
-        margin: 0px 2px;
-        text-align: center;
-    }
+.tag-card {
+    display: inline-block;
+    padding: 1px 8px;
+    margin: 0px 2px;
+    text-align: center;
+    border-radius: 6px;
+}
 
-    .tag-bg-color {
-        color: $bg-color;
-    }
+.tag-bg-color {
+    color: $bg-color;
 }
 
 div.card:hover {

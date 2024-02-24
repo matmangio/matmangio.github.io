@@ -1,0 +1,9 @@
+- name: game-jam
+  bgcolor: "#92d2bf"
+  color: "#293f58"
+- name: puzzle
+  bgcolor: "#ffcf70"
+  color: "#293f58"
+- name: real-time
+  bgcolor: "#ff7900"
+  color: "#293f58"

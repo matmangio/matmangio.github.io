@@ -1,4 +1,12 @@
 ---
-layout: my_default
+layout: my_post
 ---
 {{ content }}
+
+{% if page.link != null %}
+    <div class="align-center">
+        <iframe frameborder="0" src="https://itch.io/embed/1663982?linkback=true&amp;bg_color=354d69&amp;fg_color=d9d9d9&amp;link_color=ea6b22&amp;border_color=ea6b22" width="100%" height="167">
+            <a href="{{ page.link }}">{{ page.title }} by {{ site.data.socials["itch.io"].username }}</a>
+        </iframe>
+    </div>
+{% endif %}

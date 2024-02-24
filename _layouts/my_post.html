@@ -3,24 +3,32 @@ layout: my_default
 ---
 
 <div class="links space-between">
-    <a href="/articles.html" class="std-decoration no-underline">
-        < <u>back to articles</u>
+    <a href="{{ page.parent }}" class="std-decoration no-underline">
+        {% assign parent_name = page.parent | remove: "/" | remove: ".html" %}
+        < <u>back to {{ parent_name }}</u>
     </a>
     <p>{{ page.date | date: "%Y/%m/%d" }}</p>
 </div>
 
-{% if page.cover != null %}
+{% if page.banner != null %}
     <div class="post-cover">
-        <img src="{{ page.cover }}">
+        <img src="{{ page.banner }}">
     </div>
 {% endif %}
 
 <h1 class="post-title">{{ page.title }}</h1>
 
 <p class="tags">
-    {% for tag in page.tags %}
-        <b>#{{ tag | remove: ","}}</b>
-    {% endfor %}
+    {%if page.tags.size > 0 %}
+        {% assign tags_num = page.tags.size | minus: 1 %}
+        {% for i in (0..tags_num) %}
+            {% assign tag_name = page.tags[i] | remove: "," %}
+            {% assign tag_data = site.data.tags | where: "name", tag_name | first %} 
+            <div class="tag-card" {% if tag_data %} style="background-color: {{ tag_data.bgcolor }}; color: {{ tag_data.color }}" {% endif %}>
+               <b>{{ tag_name }}</b>
+            </div>
+        {% endfor %} 
+    {% endif %}
 </p>
 
 {{ content }}

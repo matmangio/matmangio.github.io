@@ -16,9 +16,9 @@
                                 {% for i in (0..tags_num) %}
                                     {% assign tag_name = post.tags[i] | remove: "," %}
                                     {% assign tag_data = site.data.tags | where: "name", tag_name | first %} 
-                                    <b class="tag-card" {% if tag_data %} style="background-color: {{ tag_data.bgcolor }}; color: {{ tag_data.color }}" {% endif %}>
-                                        {{ tag_name }}
-                                    </b>
+                                    <div class="tag-card" {% if tag_data %} style="background-color: {{ tag_data.bgcolor }}; color: {{ tag_data.color }}" {% endif %}>
+                                        <b>{{ tag_name }}</b>
+                                    </div>
                                 {% endfor %} 
                             {% endif %}
                         </div>
