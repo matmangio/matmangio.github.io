@@ -16,5 +16,5 @@ The game thus has the player balance the population of these two species by cons
 
 Being my first real project developed in such a short amount of time the game is extremely under-polished.
 I was learning to use Unity on the go and had to implement A* pathfinding in an engine I didn't completely know: nowadays I would have just used the navigation system, but back then I didn't even know it existed!
-Maybe someday I will return to this idea to make a post-jam version, as I still find it quite interesting. 
+Maybe someday I will return to this idea to make a post-jam version, as I still find it quite interesting.
 In the meantime, you can try the game on itch.io by following the links below!
