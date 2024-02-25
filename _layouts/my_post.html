@@ -31,7 +31,9 @@ layout: my_default
     {% endif %}
 </p>
 
-{{ content }}
+<div class="post-content">
+    {{ content }}
+</div>
 
 <div class="links {% if page.previous != null and page.next != null %} space-between {% elsif page.next != null %} align-right {% endif %}">
     {% if page.previous != null %}

@@ -7,24 +7,36 @@
                 <img src="{{ post.cover }}" class="cover">
             {% endif %}
             <div class="card-content to-clamp">
-                <h3 style="text-align: left;"><u>{{ post.title }}</u></h3>
-                <p>
-                    <small>
-                        {{ post.date | date: "%Y/%m/%d" }}
-                        <div class="hidden-sm">
-                            {%if post.tags.size > 0 %}
-                                {% for i in (0..tags_num) %}
-                                    {% assign tag_name = post.tags[i] | remove: "," %}
-                                    {% assign tag_data = site.data.tags | where: "name", tag_name | first %} 
-                                    <div class="tag-card" {% if tag_data %} style="background-color: {{ tag_data.bgcolor }}; color: {{ tag_data.color }}" {% endif %}>
-                                        <b>{{ tag_name }}</b>
-                                    </div>
-                                {% endfor %} 
-                            {% endif %}
-                        </div>
-                    </small>
-                </p>
-                <p>{{ post.excerpt }}</p>
+                <div class="space-between"> <!-- Title for big screens -->
+                    <h3 style="text-align: left;" class="hidden-sm"><u>{{ post.title }}</u></h3>
+                    <p style="min-width: fit-content;" class="hidden-sm">
+                        <small>
+                            {{ post.date | date: "%Y/%m/%d" }}
+                        </small>
+                    </p>
+                </div>
+                <div> <!-- Alternative title for small screens -->
+                    <h4 style="text-align: left;" class="hidden-over-sm"><u>{{ post.title }}</u></h4>
+                    <p class="hidden-over-sm">
+                        <small>
+                            {{ post.date | date: "%Y/%m/%d" }}
+                        </small>
+                    </p>
+                </div>
+                <div class="hidden-sm">
+                    {%if post.tags.size > 0 %}
+                        {% for i in (0..tags_num) %}
+                            {% assign tag_name = post.tags[i] | remove: "," %}
+                            {% assign tag_data = site.data.tags | where: "name", tag_name | first %} 
+                            <div class="tag-card" {% if tag_data %} style="background-color: {{ tag_data.bgcolor }}; color: {{ tag_data.color }}" {% endif %}>
+                                {{ tag_name }}
+                            </div>
+                        {% endfor %} 
+                    {% endif %}
+                </div>
+                <div class="card-excerpt">
+                    {{ post.excerpt | strip_html }}
+                </div>
             </div>
         </a>
     </div>

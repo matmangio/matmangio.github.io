@@ -9,8 +9,6 @@ div.post-cover {
 }
 
 div.links {
-    display: flex;
-
     a {
         margin: 10px;
         display: inline-block;
@@ -21,7 +19,8 @@ div.links {
     }
 }
 
-div.links.space-between {
+div.space-between {
+    display: flex;
     justify-content: space-between;
 }
 
@@ -39,4 +38,15 @@ h1.post-title {
 
 p.tags {
     margin: 0px 0px 8px 0px;
+}
+
+div.post-content {
+    a {
+        color: $text-color;
+        text-decoration: underline;
+    }
+
+    a:hover {
+        color: $border-color;
+    }
 }
