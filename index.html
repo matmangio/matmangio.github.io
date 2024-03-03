@@ -2,23 +2,16 @@
 title: home
 ---
 {% include /liquid/time.liquid %}
-<img src="/assets/images/favicon.png" width="25%" class="circular-border float" style="margin: 0px 16px 5px 0px;">
-<h1><u>Hi there!</u> :wave:</h1>
-<p>
-    I'm <b>Matteo Mangioni</b>, a {{ my_age }}-years-old aspiring game designer with an interest in writing, and this is my personal website!
-    I've faithfully decided to build most of it myself, so don't be too harsh on it: I know my aesthetic sense is not the best, but I really tried! ^_^'
-</p>
-<p>
-    <b>What can you expect to find on this site?</b> <br>
-    A lot, actually! The <b><a href="/articles.html" class="std-decoration">articles</a></b> section will house reviews and essays about video games, board games, role-playing games and all things I may find interesting, along with a series of blog posts documenting my game design journey.
-    A page dedicated to <b><a href="/games.html" class="std-decoration">games</a></b> will then list my gamedev projects: most of them will be game jam entries, but there may also be room for some academic assignments and bigger projects!
-    Lastly, the <b><a href="/about.html" class="std-decoration">about</a></b> page contains a description of my academic background and ambitions, along with detailed contact information: so, if you're here to hire me, head there! ;)
-</p>
-<p>
-    <b>Want to keep up with what I post?</b> <br>
-    First of all, thank you! You can follow me on most social media, you'll find the links in the footer of every page and in the about section.
-    There's also an RSS feed available if you, like me, are into that!
-</p>
+<div class="pure-g">
+    <div class="pure-u-1">
+        <img src="/assets/images/favicon.png" width="25%" class="circular-border float" style="margin: 0px 16px 5px 0px;">
+        <h1><u>Hi there!</u> :wave:</h1>
+        <p style="margin-bottom: 0;">
+            I'm <b>Matteo Mangioni</b>, a {{ my_age }}-years-old aspiring game designer with an interest in writing, and this is my personal website!
+            I've faithfully decided to build most of it myself, so don't be too harsh on it: I know my aesthetic sense is not the best, but I really tried! ^_^'
+        </p>
+    </div>
+</div>
 
 <h2 class="center-text"> :page_facing_up: <u>Latest post</u></h2>
 {% if site.posts.size > 0 %}
