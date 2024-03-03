@@ -2,9 +2,12 @@
 title: Popi & Gonzo
 date: 2022-08-15
 tags: game-jam, puzzle, real-time
+
 cover: /assets/images/games/popi-gonzo/popi-gonzo_cover.png
 banner: /assets/images/games/popi-gonzo/popi-gonzo_banner.png
-embed-link: https://matmangio.itch.io/popi-and-gonzo
+
+embed-link: https://itch.io/embed/1663982?linkback=true&amp;bg_color=354d69&amp;fg_color=d9d9d9&amp;link_color=ea6b22&amp;border_color=ea6b22
+game-link: https://matmangio.itch.io/popi-and-gonzo
 ---
 
 My first ever game project, made in 72 hours for the [Wowie Game Jam 4.0](https://itch.io/jam/wowie-jam-4).
