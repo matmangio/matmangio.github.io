@@ -28,7 +28,7 @@ jobs:
               list+=("`grep 'title:' "$post" | cut -d ':' -f 2 | xargs `")
             done
           done
-          echo "result=$list" >> $GITHUB_OUTPUT
+          echo "result=${!list[@]}" >> $GITHUB_OUTPUT
           echo $list
       - name: Get a list of all issues with the label Gitalk
         id: gitalkIssues
