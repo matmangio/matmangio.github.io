@@ -21,7 +21,8 @@ jobs:
         id: postTitles
         run: |
           declare -a list
-          collections=${{ steps.getCollections.outputs.result }}+("posts")
+          collections[0]="posts"
+          collections+=${{ steps.getCollections.outputs.result }}
           for collection in $collections
           do
             for post in "_$collection"/*
