@@ -27,6 +27,7 @@ jobs:
           collections+=${{ steps.getCollections.outputs.result }}
           for collection in $collections
           do
+            collection="`echo $collection | cut -d '[' -f 1`"
             for post in "_$collection"/*
             do
               list+=("`grep 'title:' "$post" | cut -d ':' -f 2 | cut -d ' ' -f 2`")
