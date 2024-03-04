@@ -18,7 +18,7 @@ jobs:
         id: getCollections
         uses: mikefarah/yq@master
         with:
-          cmd: yq '[.collections | select(.output == True ) | .]' '_config.yml'
+          cmd: yq '[.collections | select(.output == True ) ]' '_config.yml'
       - name: Get a list of all the titles of posts in the collections + the default collection _posts
         id: postTitles
         run: |
