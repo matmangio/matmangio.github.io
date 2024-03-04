@@ -19,13 +19,13 @@ jobs:
         run: |
           declare -a list
           declare -a collections
-          collections+=("games")
+          collections+=("posts" "games")
           for collection in $collections
           do
             collection="`echo $collection | cut -d '[' -f 1`"
             for post in ./_"$collection"/*
             do
-              list+=("`grep 'title:' "$post" | cut -d ':' -f 2 | cut -d ' ' -f 2`")
+              list+=("`grep 'title:' "$post" | cut -d ':' -f 2 | xargs `")
             done
           done
           echo "result=$list" >> $GITHUB_OUTPUT
