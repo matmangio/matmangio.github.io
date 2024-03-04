@@ -19,7 +19,7 @@ jobs:
         run: |
           declare -a list
           declare -a collections
-          collections+=("posts" "games")
+          collections+=("games")
           for collection in $collections
           do
             collection="`echo $collection | cut -d '[' -f 1`"
