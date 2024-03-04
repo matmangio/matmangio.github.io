@@ -18,13 +18,16 @@ jobs:
         id: getCollections
         uses: mikefarah/yq@master
         with:
-          cmd: yq '.collections | select(.output == "true") | .' _config.yml
+          cmd: yq eval '.collections' "_config.yml"
       - name: Get a list of all the titles of posts in the collections + the default collection _posts
         id: postTitles
         run: |
           declare -a list
-          readarray collections < <(${{ steps.getCollections.outputs.result }})
+          declare -a collections
           collections+=("posts")
+          while IFS= read -r value; do
+            collections+=($value)
+          done < <(${{ steps.getCollections.outputs.result }})
           for collection in $collections
           do
             collection="`echo $collection | cut -d '[' -f 1`"
