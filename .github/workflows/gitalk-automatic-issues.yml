@@ -1,0 +1,43 @@
+name: gitalk-automatic-issues-for-jekyll
+run-name: Creating Gitalk issues for any new posts in the Jekyll repo
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+permissions:
+  issues: write
+jobs:
+  create-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get collections as specified in _config.yml
+        id: getCollections
+        uses: mikefarah/yq@master
+        with:
+          cmd: yq '[.collections | select(.output == True ) | .]' '_config.yml'
+      - name: Get a list of all the titles of posts in the collections + the default collection _posts
+        id: postTitles
+        run: |
+          list=()
+          collections=${{ steps.getCollections.outputs.result }}+("posts")
+          for collection in $collections
+          do
+            for post in "_$collection"/*
+            do
+              list+=("`grep 'title:' '$post' | cut -d ': ' -f 2`")
+            done
+          done
+          echo "result=$list" >> $GITHUB_OUTPUT
+      - name: Get a list of all issues with the label Gitalk
+        id: gitalkIssues
+        run: echo "result=`gh issue list -l 'Gitalk' | grep '#' | cut -f 2`" >> GITHUB_OUTPUT
+      - name: Create issue for new posts
+        run: |
+          for title in ${{ steps.postTitles.outputs.result }}
+          do
+            if [[ ${{steps.gitalkIssues.outputs.result}} != *"$title"* ]]; then
+              gh issue create -l 'Gitalk' -b 'Comments for $title' -t '$title'
+            fi
+          done
