@@ -19,7 +19,7 @@ jobs:
         run: |
           declare -a list
           declare -a collections
-          collections+=("posts" "games")
+          collections+=("games")
           for collection in $collections
           do
             collection="`echo $collection | cut -d '[' -f 1`"
@@ -32,7 +32,7 @@ jobs:
           echo $list
       - name: Get a list of all issues with the label Gitalk
         id: gitalkIssues
-        run: echo "result=`gh issue list -l 'Gitalk' | grep '#' | cut -f 2`" >> GITHUB_OUTPUT
+        run: echo "result=`gh issue list -l 'Gitalk'`" >> GITHUB_OUTPUT
       - name: Create issue for new posts
         run: |
           for title in ${{ steps.postTitles.outputs.result }}
