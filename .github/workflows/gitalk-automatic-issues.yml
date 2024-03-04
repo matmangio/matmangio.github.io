@@ -10,6 +10,8 @@ permissions:
 jobs:
   create-issues:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
       - name: Get collections as specified in _config.yml
