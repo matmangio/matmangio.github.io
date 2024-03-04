@@ -14,20 +14,12 @@ jobs:
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
-      - name: Get collections as specified in _config.yml
-        id: getCollections
-        uses: mikefarah/yq@master
-        with:
-          cmd: yq eval '.collections | with_entries(select(.value.output == true)) | .' _config.yml
       - name: Get a list of all the titles of posts in the collections + the default collection _posts
         id: postTitles
         run: |
           declare -a list
           declare -a collections
-          while IFS= read -r value; do
-            collections+=($value)
-          done < <(${{ steps.getCollections.outputs.result }})
-          collections+=("posts")
+          collections+=("posts" "games")
           for collection in $collections
           do
             collection="`echo $collection | cut -d '[' -f 1`"
