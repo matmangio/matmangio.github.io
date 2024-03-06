@@ -6,6 +6,7 @@ title: articles
 
 {% if site.posts.size > 0 %}
     {% assign last_post_index = site.posts.size | minus: 1 %}
+    {% assign posts = site.posts | sort: 'date' | reverse %}
     {% for i in (0..last_post_index) %}
         {% assign is_top = 0 %}
         {% if i == 0 %}
@@ -14,7 +15,7 @@ title: articles
         {% if i == last_post_index %}
             {% assign is_bottom = 1 %}
         {% endif %}
-        {% include card.html collection=site.posts index=i top=is_top bottom=is_bottom %}
+        {% include card.html collection=posts index=i top=is_top bottom=is_bottom %}
     {% endfor %}
 {% else %}
     <p class="center-text">No articles published yet!</p>

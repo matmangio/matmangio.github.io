@@ -7,3 +7,6 @@
 - name: real-time
   bgcolor: "#ff7900"
   color: "#293f58"
+- name: arcade
+  bgcolor: "#d15b56"
+  color: "#293f58"

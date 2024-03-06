@@ -25,7 +25,7 @@ layout: my_default
             {% assign tag_name = page.tags[i] | remove: "," %}
             {% assign tag_data = site.data.tags | where: "name", tag_name | first %} 
             <div class="tag-card" {% if tag_data %} style="background-color: {{ tag_data.bgcolor }}; color: {{ tag_data.color }}" {% endif %}>
-               <b>{{ tag_name }}</b>
+               {{ tag_name }}
             </div>
         {% endfor %} 
     {% endif %}
