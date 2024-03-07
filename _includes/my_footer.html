@@ -11,7 +11,7 @@
                 {% if index < site.data.socials.size %}
                     <a href="{{ site.data.socials[index].link }}" class="social {% if j < column_size %} top {% endif %}">
                         {% if site.data.socials[index].svg != null%}
-                            <img src="/assets/images/svg/{{ site.data.socials[index].svg }}" height="15" class="valign-middle">
+                            <img src="/assets/images/svg/{{ site.data.socials[index].svg }}" height="15" class="valign-middle" alt="{{ site.data.socials[index].name }} logo">
                         {% endif %}
                         {{ site.data.socials[index].name }}
                     </a>

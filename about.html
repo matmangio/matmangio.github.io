@@ -4,7 +4,7 @@ title: about
 {% include liquid/time.liquid %}
 <h1 class="center-text"><u>About me</u></h1>
 <div>
-    <img class="circular-border float" src="assets/images/avatar.jpg" width="30%" style="margin: -20px 16px 0px 0px;">
+    <img class="circular-border float" src="assets/images/avatar.jpg" width="30%" style="margin: -20px 16px 0px 0px;" alt="Matteo Mangioni's photo">
     <p style="margin-top: 0;">
         Hi!
         I'm Matteo Mangioni, a {{ my_age }}-years-old Computer Science student based in <b>Milan, Italy</b> :it:.
@@ -31,7 +31,7 @@ title: about
                 {% assign follows = site.data.socials | where: "type", "follow" %}
                 {% for item in follows %}
                     <a class="std-decoration no-underline" href="{{ item.link }}">
-                        <img height="30" src="/assets/images/svg/{{ item.svg }}" class="on-bg change-on-hover">
+                        <img height="30" src="/assets/images/svg/{{ item.svg }}" class="on-bg change-on-hover" alt="{{ item.name }} logo">
                     </a>
                 {% endfor %}
             </div>

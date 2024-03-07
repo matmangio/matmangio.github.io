@@ -4,7 +4,7 @@
     <div class="card {%if include.top == 1 %} top-card {% endif %} {%if include.bottom == 1 %} bottom-card {% endif %}">
         <a href="{{ post.url }}">
             {% if post.image != null %}
-                <img src="{{ post.image }}" class="cover">
+                <img src="{{ post.image }}" class="cover" alt="{{ post.title }} cover image">
             {% endif %}
             <div class="card-content to-clamp">
                 <div class="space-between"> <!-- Title for big screens -->
