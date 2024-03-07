@@ -3,13 +3,17 @@ title: Popi & Gonzo
 date: 2022-08-15
 tags: game-jam, puzzle, real-time
 
-cover: /assets/images/games/popi-gonzo/popi-gonzo_cover.png
+image: /assets/images/games/popi-gonzo/popi-gonzo_cover.png
 banner: /assets/images/games/popi-gonzo/popi-gonzo_banner.png
 
 embed-link: https://itch.io/embed/1663982?linkback=true&amp;bg_color=354d69&amp;fg_color=d9d9d9&amp;link_color=ea6b22&amp;border_color=ea6b22
 game-link: https://matmangio.itch.io/popi-and-gonzo
-
 game-author: matmangio
+
+excerpt: 'Manage an ecosystem and prevent the extinction of the creatures that inhabit it! Made in 72 hours for the Wowie Game Jam 4.0: "Collaborate with AI".'
+
+# Feed parameters
+description: 'Manage an ecosystem and prevent the extinction of the creatures that inhabit it! Made in 72 hours for the Wowie Game Jam 4.0: "Collaborate with AI".'
 ---
 
 My first ever game project, made in 72 hours for the [Wowie Game Jam 4.0](https://itch.io/jam/wowie-jam-4).

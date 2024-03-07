@@ -3,8 +3,8 @@
     {% assign tags_num = post.tags.size | minus: 1 %}
     <div class="card {%if include.top == 1 %} top-card {% endif %} {%if include.bottom == 1 %} bottom-card {% endif %}">
         <a href="{{ post.url }}">
-            {% if post.cover != null %}
-                <img src="{{ post.cover }}" class="cover">
+            {% if post.image != null %}
+                <img src="{{ post.image }}" class="cover">
             {% endif %}
             <div class="card-content to-clamp">
                 <div class="space-between"> <!-- Title for big screens -->

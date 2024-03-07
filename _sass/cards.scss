@@ -2,7 +2,7 @@ div.card {
     --max-height: 135px;
     --content-padding: 10px;
     --excerpt-margin: 6px;
-    --excerpt-font-size: 0.9em;
+    --excerpt-font-size: 0.96em;
 
     @media (max-width: 671.5px) {
         --max-height: 90px;
@@ -44,7 +44,7 @@ div.card {
     div.card-excerpt {
         margin-top: var(--excerpt-margin);
         font-size: var(--excerpt-font-size);
-        line-height: 1.2;
+        line-height: 1.18;
     }
 
     .card-content {

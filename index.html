@@ -18,7 +18,7 @@ title: home
     {% assign posts = site.posts | sort: 'date' | reverse %}
     {% include card.html collection=posts index=0 top=1 bottom=1 %}
 {% else %}
-    <p class="center-text">No article published yet!</p>
+    <p class="center-text">No articles published yet!</p>
 {% endif %}
 
 <h2 class="center-text"> :game_die: <u>Latest game</u></h2>
@@ -26,5 +26,5 @@ title: home
     {% assign games = site.games | sort: 'date' | reverse %}
     {% include card.html collection=games index=0 top=1 bottom=1 %}
 {% else %}
-    <p class="center-text">No game published yet!</p>
+    <p class="center-text">No games published yet!</p>
 {% endif %}

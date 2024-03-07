@@ -22,9 +22,25 @@ title: matmangio
 description: >- # this means to ignore newlines until "baseurl:"
   Matteo Mangioni's personal site: game design and 
   articles about videogames, boardgames
-  and all things games! 
+  and all things games!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://matmangio.it" # the base hostname & protocol for your site, e.g. http://example.com
+
+# SEO settings
+tagline: Gamedev & articles
+twitter:
+  username: matmangio
+  card: summary
+logo: /assets/images/favicon.png
+social:
+  name: Matteo Mangioni
+  links:
+    - https://www.linkedin.com/in/matteo-mangioni-18302224b/
+    - https://matmangio.itch.io
+    - https://github.com/matmangio
+    - https://www.instagram.com/matmangio_games/
+    - https://twitter.com/matmangio
+    - https://www.reddit.com/user/MangioM/
 
 # Build settings
 theme: minima
@@ -87,9 +103,15 @@ defaults:
       path: ""
     values:
       layout: "my_default"
+      image: /assets/images/favicon.png
 
 # Excerpt options
 excerpt_separator: <!--more-->
 
 # Jekyll feed options
 author: matmangio
+feed:
+  posts_limit: 20
+  collections:
+    - games
+  disable_in_development: true
