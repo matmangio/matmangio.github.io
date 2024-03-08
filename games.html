@@ -1,10 +1,11 @@
 ---
 title: games
 ---
-<h1 class="center-text"><u>Games</u></h1>
-<p></p>
+<h1 class="center-text" style="margin-bottom: 6px;"><u>Games</u></h1>
 
 {% if site.games.size > 0 %}
+    <p class="center-text" style="margin-top: 0;">Here's a list of the games I've developed, either alone or in team. Enjoy!</p>
+
     {% assign last_post_index = site.games.size | minus: 1 %}
     {% assign games = site.games | sort: 'date' | reverse %}
     {% for i in (0..last_post_index) %}

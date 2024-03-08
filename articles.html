@@ -1,10 +1,11 @@
 ---
 title: articles
 ---
-<h1 class="center-text"><u>Articles</u></h1>
-<p></p>
+<h1 class="center-text" style="margin-bottom: 6px;"><u>Articles</u></h1>
 
 {% if site.posts.size > 0 %}
+    <p class="center-text" style="margin-top: 0;">Reviews, impressions and devlogs, all in a single place!</p>
+
     {% assign last_post_index = site.posts.size | minus: 1 %}
     {% assign posts = site.posts | sort: 'date' | reverse %}
     {% for i in (0..last_post_index) %}
