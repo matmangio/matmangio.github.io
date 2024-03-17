@@ -108,3 +108,18 @@ div.flex-space-evenly.wrap {
 div.min-width-fit {
     min-width: fit-content;
 }
+
+figure.responsive-image {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+
+    img {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    figcaption {
+        text-align: center;
+    }
+}

@@ -108,7 +108,7 @@ defaults:
 # Excerpt options
 excerpt_separator: <!--more-->
 
-# Jekyll feed options
+# Feed options
 author: matmangio
 feed:
   posts_limit: 20
