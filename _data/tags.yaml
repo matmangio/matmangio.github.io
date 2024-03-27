@@ -10,3 +10,6 @@
 - name: arcade
   bgcolor: "#d15b56"
   color: "#293f58"
+- name: personal
+  bgcolor: "#3F72AF"
+  color: "#293f58"

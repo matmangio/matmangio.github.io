@@ -8,6 +8,11 @@
   link: https://www.linkedin.com/in/matteo-mangioni-18302224b/
   svg: linkedin-logo.svg
   type: contact
+- name: discord
+  username: mangio_m
+  link: discordapp.com/users/431064849531928577
+  svg: discord-logo.svg
+  type: contact
 - name: itch.io
   username: matmangio
   link: https://matmangio.itch.io
