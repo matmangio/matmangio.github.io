@@ -1,27 +1,10 @@
 <div class="pure-g foot-body center word-break justify-text">
-    {% for i in (0..1) %}
-        <div class="pure-u-10-24 pure-u-md-5-24 pure-lg-3-24 pure-u-xl-3-24 pure-u-xxxl-1-24 foot-column center-text">
-            {% assign column_size = site.data.socials.size | divided_by: 2 %}
-            {% assign remainder = site.data.socials.size | modulo: 2 %}
-            {% assign column_size = column_size | plus: remainder %}
-            {% for j in (1..column_size) %}
-                {% assign index = i | times: column_size %}
-                {% assign index = index | plus: j %}
-                {% assign index = index | minus: 1 %}
-                {% if index < site.data.socials.size %}
-                    <a href="{{ site.data.socials[index].link }}" class="social {% if j < column_size %} top {% endif %}">
-                        {% if site.data.socials[index].svg != null%}
-                            <img src="/assets/images/svg/{{ site.data.socials[index].svg }}" height="15" class="valign-middle" alt="{{ site.data.socials[index].name }} logo">
-                        {% endif %}
-                        {{ site.data.socials[index].name }}
-                    </a>
-                {% endif %}
-            {% endfor %}
-        </div>
-    {% endfor %}
-    <div class="pure-u-20-24 pure-u-md-7-24 pure-u-xl-5-24 pure-u-xxxl-3-24 pure-u-x4k-1-12 foot-column">
-        <p><small>{{ site.description }}</small></p>
-        <br>
+    {% include social_columns.html columns="3" hidden-sm="true" %}
+    {% include social_columns.html columns="2" hidden-over-sm="true" %}
+    <div class="pure-u-20-24 pure-u-md-5-24 pure-u-xl-5-24 pure-u-xxxl-3-24 pure-u-x4k-1-12 foot-column hidden-sm">
+        <p><small>Powered by <a href="https://jekyllrb.com/" class="foot-decoration">Jekyll</a>, <a href="https://purecss.io/" class="foot-decoration">PureCSS</a> and <a href="https://github.com/gitalk/gitalk" class="foot-decoration">Gitalk</a>.</small></p>
+    </div>
+    <div class="pure-u-1 foot-column hidden-over-sm center-text">
         <p><small>Powered by <a href="https://jekyllrb.com/" class="foot-decoration">Jekyll</a>, <a href="https://purecss.io/" class="foot-decoration">PureCSS</a> and <a href="https://github.com/gitalk/gitalk" class="foot-decoration">Gitalk</a>.</small></p>
     </div>
 </div>
