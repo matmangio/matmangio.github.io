@@ -8,23 +8,23 @@ title: home
         <h1><u>Hi there!</u> :wave:</h1>
         <p style="margin-bottom: 0;">
             I'm <b>Matteo Mangioni</b>, a {{ my_age }}-years-old aspiring game designer with an interest in writing, and this is my personal website!
-            I've faithfully decided to build most of it myself, so don't be too harsh on it: I know my aesthetic sense is not the best, but I really tried! ^_^'
+            Here you can find my toughts on various video games, board games and role playing games along with the games I develop, I hope you like it! ^_^ 
         </p>
     </div>
 </div>
 
-<h2 class="center-text"> :page_facing_up: <u>Latest post</u></h2>
+<h3> :page_facing_up: <u>Latest post</u></h3>
 {% if site.posts.size > 0 %}
     {% assign posts = site.posts | sort: 'date' | reverse %}
     {% include card.html collection=posts index=0 top=1 bottom=1 %}
 {% else %}
-    <p class="center-text">No articles published yet!</p>
+    <p>No articles published yet!</p>
 {% endif %}
 
-<h2 class="center-text"> :game_die: <u>Latest game</u></h2>
+<h3> :game_die: <u>Latest game</u></h3>
 {% if site.games.size > 0 %}
     {% assign games = site.games | sort: 'date' | reverse %}
     {% include card.html collection=games index=0 top=1 bottom=1 %}
 {% else %}
-    <p class="center-text">No games published yet!</p>
+    <p>No games published yet!</p>
 {% endif %}

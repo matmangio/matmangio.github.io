@@ -20,10 +20,14 @@ title: about
     <div class="flex-space-evenly wrap">
         <div class="min-width-fit">
             <h3 style="margin: 5px 0px;" class="center-text"><u>Contacts</u></h3>
-            {% assign contacts = site.data.socials | where: "type", "contact" %}
-            {% for item in contacts %}
-                <b>{{ item.name | capitalize }}</b>: <a class="std-decoration no-underline" href="{{ item.link }}">{{ item.username }}</a><br>
-            {% endfor %}
+            <div class="links space-between" style="max-width: 500px;">
+                {% assign follows = site.data.socials | where: "type", "contact" %}
+                {% for item in follows %}
+                    <a class="std-decoration no-underline" href="{{ item.link }}">
+                        <img height="30" src="/assets/images/svg/{{ item.svg }}" class="on-bg change-on-hover" alt="{{ item.name }} logo">
+                    </a>
+                {% endfor %}
+            </div>
         </div>
         <div class="min-width-fit">
             <h3 style="margin: 5px 0px;" class="center-text"><u>Follow me</u></h3>
