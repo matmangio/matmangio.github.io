@@ -1,32 +1,33 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: MM
-email:
+title: matmangio
+name: Matteo Mangioni
+email: mat.mangioni@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
-search: true
+  Matteo Mangioni's gamedev portfolio and blog about games!
+url: "https://matmangio.it"
+repository: "matmangio/matmangio.github.io"
+github_username: matmangio
 
 # Build settings
-markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: dark
+title_separator: "|"
+date_format: "%Y-%m-%d"
+enable_copy_code_button: true
+search: false
+locale: "en"
+markdown: kramdown
+
+head_scripts:
+footer_scripts:
+
+og_image: /assets/images/logo.png
+og_image_alt: "Site logo"
+teaser: /assets/images/logo.png
+masthead_title: ""
+
+show_taxonomy: false
+
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
@@ -36,17 +37,16 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 include:
   - _pages
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - bin/preview
 
 # Plugins (previously gems:)
 plugins:
@@ -58,34 +58,35 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "Matteo Mangioni"
+  avatar : "/assets/images/logo.png"
+  bio    : "Game Designer and Developer. Proud member of <b><a href='https://wauhaus.itch.io/'>Wauhaus Productions</a></b>!"
+  location: "Milan, Italy"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: "Itch.io"
+      icon: "fa-brands fa-itch-io"
+      url: "https://matmangio.itch.io/"
+    - label: "LinkedIn"
+      icon: "fa-brands fa-linkedin"
+      url: "https://www.linkedin.com/in/matteo-mangioni-18302224b/"
+    - label: "Email"
+      icon: "fa-solid fa-at"
+      url: "mailto:mat.mangioni@gmail.com"
+    - label: "Feed"
+      icon: "fa-solid fa-square-rss"
+      url: "https://matmangio.it/feed.xml"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: "Itch.io"
+      icon: "fa-brands fa-itch-io"
+      url: "https://matmangio.itch.io/"
+    - label: "LinkedIn"
+      icon: "fa-brands fa-linkedin"
+      url: "https://www.linkedin.com/in/matteo-mangioni-18302224b/"
+    - label: "Email"
+      icon: "fa-solid fa-at"
+      url: "mailto:mat.mangioni@gmail.com"
 
 defaults:
   # _posts
@@ -94,11 +95,14 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      related: false
+      show_date: true
+      update_date: false
+      toc: false
   # _pages
   - scope:
       path: "_pages"
@@ -107,9 +111,10 @@ defaults:
       layout: single
       author_profile: true
 
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+collections:
+  games:
+    output: true
+    permalink: /:collection/:path/
+
+feed:
+  disable_in_development: true
