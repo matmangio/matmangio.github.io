@@ -23,7 +23,7 @@
 		{% if include.type == "grid" %}
 			{{ title }} <a class="u-url" href="{{ post.link }}" rel="permalink"><span class="sr-only">Permalink</span></a>
 		{% else %}
-        	<a href="{{ post.link }}">{{ title }}</a> <a class="u-url" href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        	<a href="{{ post.link }}">{{ title }}</a> {% if post.permalink %} <a class="u-url" href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a> {% endif %}
 		{% endif %}
 	  {% else %}
         <a class="u-url" href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
