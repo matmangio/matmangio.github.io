@@ -111,6 +111,11 @@ defaults:
     values:
       layout: single
       author_profile: false
+  - scope:
+      path: "_games"
+      type: games
+    values:
+      importance: 0
 
 collections:
   games:

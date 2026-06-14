@@ -7,8 +7,10 @@ author_profile: false
 <h1 style="text-align: center;">Matteo Mangioni</h1>
 <p style="text-align: center; margin-top:-0.5em;">Game Designer & Developer</p>
 
+{% assign games = site['games'] | sort: 'importance' | reverse %}
+
 <div class="entries-grid">
-	{% for post in site['games'] limit:4 %}
+	{% for post in games limit:4 %}
 	  	{% include archive-single.html type='grid' %}
 	{% endfor %}
 </div>
