@@ -104,6 +104,7 @@ defaults:
       show_date: true
       update_date: false
       toc: false
+      show_tags: false
   # _pages
   - scope:
       path: "_pages"
@@ -116,6 +117,7 @@ defaults:
       type: games
     values:
       importance: 0
+      show_tags: true
 
 collections:
   games:

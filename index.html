@@ -16,17 +16,17 @@ author_profile: false
 </div>
 
 <div style="clear: both; text-align: center;">
-	<a href="/games/"><h3><i>More games ></i></h3></a>
+	<a href="/games/"><button class="btn btn--large">More games</button></a>
 </div>
 
-<div class="entries-list">
-	{% for post in site['posts'] limit:4 %}
-	  	{% include archive-single.html type='list' %}
-	{% endfor %}
-</div>
 
 {% if site['posts'].size > 0 %}
+	<div class="entries-list">
+		{% for post in site['posts'] limit:4 %}
+		  	{% include archive-single.html type='list' %}
+		{% endfor %}
+	</div>
 	<div style="clear: both; text-align: center;">
-		<a href="/blog/"><h3><i>More articles ></i></h3></a>
+		<a href="/blog/"><button class="btn btn--large">More articles</button></a>
 	</div>
 {% endif %}
