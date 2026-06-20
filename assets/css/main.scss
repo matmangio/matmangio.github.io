@@ -18,8 +18,12 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+a.nodecoration {
+	text-decoration: none;
+}
+
 @media (min-width: 64em) {
-  .page {
+  .page.widened {
     width: 100%;
 	padding-inline-end: 0;
   }

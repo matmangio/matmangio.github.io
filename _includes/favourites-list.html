@@ -1,0 +1,11 @@
+<ul class="favourites_list">
+{% for thing in site.data.favourites %}
+	<li>
+		{% if thing.link %}
+			<a href="{{ thing.link }}">{{ thing.name }}</a>
+		{% else %}
+			{{ thing.name }}
+		{% endif %}
+	</li>
+{% endfor %}
+</ul>
