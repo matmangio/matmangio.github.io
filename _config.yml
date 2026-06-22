@@ -114,15 +114,19 @@ defaults:
       author_profile: false
   - scope:
       path: "_games"
-      type: games
+      type: posts
     values:
+      layout: "redirect"
       importance: 0
       show_tags: true
 
 collections:
   games:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 feed:
+  collections:
+    - games
+  posts_limit: 20
   disable_in_development: true
