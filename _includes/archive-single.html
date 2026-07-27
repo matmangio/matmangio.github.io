@@ -40,10 +40,10 @@
     {% if post.excerpt %}
 		{% if include.type == "grid" %}
 			<div class="dropdown">
-				<p class="archive__item-excerpt p-summary" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>
+				<p class="archive__item-excerpt p-summary" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 180 }}</p>
 			</div>
 		{% else %}
-			<p class="archive__item-excerpt p-summary" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>
+			<p class="archive__item-excerpt p-summary" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 180 }}</p>
 		{% endif %}
 	{% endif %}
   </article>

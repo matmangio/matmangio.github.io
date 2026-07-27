@@ -3,7 +3,7 @@ title: "Dungeon Intern: Dominate Person"
 link: https://wauhaus.itch.io/dungeon-intern-dominate-person
 header:
   teaser: "assets/images/games/dungeon-intern-dominate-person.png"
-importance: 1
+importance: 0
 tags:
   - videogame
   - game_jam
